@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cool Download Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="title-container">
+    <h1>Welcome to My Downloading Website</h1>
+  </div>
+  <div class="downloads">
+    <a href="path-to-your-file1" id="file-link1">Download File 1</a>
+    <a href="path-to-your-file2" id="file-link2">Download File 2</a>
+    <a href="path-to-your-file3" id="file-link3">Download File 3</a>
+  </div>
+
+  <div class="theme-picker">
+    <button onclick="setTheme('default')">Default</button>
+    <button onclick="setTheme('dark')">Dark</button>
+    <button onclick="setTheme('purple')">Purple</button>
+    <button onclick="setTheme('blue')">Blue</button>
+    <button onclick="setTheme('orange')">Orange</button>
+  </div>
+
+  <div class="chat-container">
+    <h2>Feedback Chat</h2>
+    <div id="chat-box"></div>
+    <textarea id="chat-input" placeholder="Enter your feedback here..." maxlength="250" oninput="updateCounter()"></textarea>
+    <div id="char-counter">250 characters left</div>
+    <button onclick="sendFeedback()">Send</button>
+    <button onclick="showPasswordPopup()">Clear Chat</button>
+  </div>
+
+  <div id="password-popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="hidePasswordPopup()">&times;</span>
+      <h2>Enter Password</h2>
+      <input type="password" id="password-input" placeholder="Enter password">
+      <button onclick="checkPassword()">Submit</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
